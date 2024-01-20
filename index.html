@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="headerText">Simulador de Juros Compostos</h1>
+      <div class="headerInputDiv">
+        <label class="headerTextLabel">Valor Inicial</label>
+        <input type="text" class="headerTextInput" id="valorInicialInput" />
+      </div>
+
+      <div class="headerInputDiv">
+        <label class="headerTextLabel">Valor Mensal</label>
+        <input type="text" class="headerTextInput" id="valorMensalInput" />
+      </div>
+
+      <div class="headerInputDiv">
+        <label class="headerTextLabel">Taxa de Juros Anual (em %)</label>
+        <input type="text" class="headerTextInput" id="taxaDeJurosAnualInput" />
+      </div>
+
+      <div class="headerInputDiv">
+        <label class="headerTextLabel">Período em Meses</label>
+        <input type="text" class="headerTextInput" id="periodoEmMesesInput" />
+      </div>
+
+      <button class="headerButton" onClick="calcular()">Calcular</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
