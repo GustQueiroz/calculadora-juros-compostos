@@ -57,12 +57,39 @@
       <button class="headerButton" onClick="calcular()">
         Calcular Investimento
       </button>
+    </div>
 
-      <div id="resultado" style="display: none">
-        <h2>Resultado da Simulação</h2>
-        <p id="valorFinal">R$ 0,00</p>
+    <div class="modal-overlay" id="modalResultado">
+      <div class="modal">
+        <button class="modal-close" onclick="fecharModal()">✕</button>
+        <div class="modal-header">
+          <h2 class="modal-title">Resultado da Simulação</h2>
+          <p class="modal-subtitle">Confira os detalhes do seu investimento</p>
+        </div>
+        <div class="modal-content">
+          <div class="resultado-valor" id="valorFinal">R$ 0,00</div>
+          <div class="resultado-info">
+            <p id="valorInvestidoTotal">Valor total investido: R$ 0,00</p>
+            <p id="valorJuros">Rendimento: R$ 0,00</p>
+          </div>
+          <div class="modal-buttons">
+            <button
+              class="modal-button button-secondary"
+              onclick="fecharModal()"
+            >
+              Fechar
+            </button>
+            <button
+              class="modal-button button-primary"
+              onclick="novaSimulacao()"
+            >
+              Nova Simulação
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
