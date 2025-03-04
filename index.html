@@ -1,35 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora de Juros Compostos</title>
+    <link rel="stylesheet" href="src/App.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <h1 class="headerText">Simulador de Juros Compostos</h1>
+      <h1>Calculadora de Investimentos</h1>
+
       <div class="headerInputDiv">
-        <label class="headerTextLabel">Valor Inicial</label>
-        <input type="text" class="headerTextInput" id="valorInicialInput" />
+        <label class="headerTextLabel">Valor Inicial (R$)</label>
+        <input
+          type="number"
+          class="headerTextInput"
+          id="valorInicialInput"
+          placeholder="Ex: 1000"
+        />
       </div>
 
       <div class="headerInputDiv">
-        <label class="headerTextLabel">Valor Mensal</label>
-        <input type="text" class="headerTextInput" id="valorMensalInput" />
+        <label class="headerTextLabel">Aporte Mensal (R$)</label>
+        <input
+          type="number"
+          class="headerTextInput"
+          id="valorMensalInput"
+          placeholder="Ex: 100"
+        />
       </div>
 
       <div class="headerInputDiv">
-        <label class="headerTextLabel">Taxa de Juros Anual (em %)</label>
-        <input type="text" class="headerTextInput" id="taxaDeJurosAnualInput" />
+        <label class="headerTextLabel">Taxa de Juros Anual (%)</label>
+        <input
+          type="number"
+          class="headerTextInput"
+          id="taxaDeJurosAnualInput"
+          placeholder="Ex: 12"
+        />
       </div>
 
       <div class="headerInputDiv">
-        <label class="headerTextLabel">Período em Meses</label>
-        <input type="text" class="headerTextInput" id="periodoEmMesesInput" />
+        <label class="headerTextLabel">Período (meses)</label>
+        <input
+          type="number"
+          class="headerTextInput"
+          id="periodoEmMesesInput"
+          placeholder="Ex: 12"
+        />
       </div>
 
-      <button class="headerButton" onClick="calcular()">Calcular</button>
+      <button class="headerButton" onClick="calcular()">
+        Calcular Investimento
+      </button>
+
+      <div id="resultado" style="display: none">
+        <h2>Resultado da Simulação</h2>
+        <p id="valorFinal">R$ 0,00</p>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
